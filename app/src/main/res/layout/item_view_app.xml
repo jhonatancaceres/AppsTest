@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/app_grid_item">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/tvImageAppBack"
+        android:background="@drawable/backimage2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="$ 3.400"
+        android:id="@+id/tvItemAppPrice"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/tvImageAppBack"
+        android:layout_alignRight="@+id/tvImageAppBack"
+        android:layout_alignEnd="@+id/tvImageAppBack"
+        android:gravity="center_horizontal"
+        android:layout_alignLeft="@+id/tvImageAppBack"
+        android:layout_alignStart="@+id/tvImageAppBack" />
+
+    <ImageView
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:id="@+id/ivItemAppImage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp" />
+
+</RelativeLayout>

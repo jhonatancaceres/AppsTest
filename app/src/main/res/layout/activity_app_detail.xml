@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="co.grability.test.front.activity.AppDetailActivity">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/ivAppDetailBack"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/backimage2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Label App"
+        android:id="@+id/tvAppDetailLabel"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/ivAppDetailBack"
+        android:textColor="@color/colorPrimary"
+        android:lines="2"
+        android:layout_toRightOf="@+id/ivAppDetailBack"
+        android:layout_marginLeft="10dp"
+        android:gravity="fill_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Price"
+        android:id="@+id/tvAppDetailPrice"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="right"
+        android:layout_below="@+id/tvAppDetailArtistLabel"
+        android:layout_alignRight="@+id/tvAppDetailArtistLabel"
+        android:layout_alignEnd="@+id/tvAppDetailArtistLabel"
+        android:layout_alignLeft="@+id/tvAppDetailArtistLabel"
+        android:layout_alignStart="@+id/tvAppDetailArtistLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Summary"
+        android:id="@+id/tvAppDetailSummary"
+        android:layout_alignParentBottom="true"
+
+        android:layout_below="@+id/ivAppDetailBack"
+        android:layout_alignRight="@+id/tvAppDetailPrice"
+        android:layout_alignEnd="@+id/tvAppDetailPrice"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Artist"
+        android:id="@+id/tvAppDetailArtistLabel"
+        android:textColor="@color/colorTitle"
+        android:gravity="left"
+        android:layout_below="@+id/tvAppDetailLabel"
+        android:layout_alignLeft="@+id/tvAppDetailLabel"
+        android:layout_alignStart="@+id/tvAppDetailLabel"
+        android:lines="2"
+        android:layout_alignRight="@+id/tvAppDetailLabel"
+        android:layout_alignEnd="@+id/tvAppDetailLabel" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/ivAppDetailImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp" />
+
+</RelativeLayout>
