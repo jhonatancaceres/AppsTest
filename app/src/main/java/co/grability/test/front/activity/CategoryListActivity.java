@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -30,6 +31,8 @@ public class CategoryListActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_category);
         ApplicationManager.setup(this);
         setupListView();
+        TextView internetStatus=(TextView)findViewById(R.id.tvGeneralStatus);
+        internetStatus.setText(ApplicationManager.checkInternet(this)?"Online":"Offline");
     }
     @Override
     public void onClick(View v){

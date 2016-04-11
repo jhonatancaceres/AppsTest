@@ -41,27 +41,12 @@
         android:text="Price"
         android:id="@+id/tvAppDetailPrice"
         android:textColor="@color/colorPrimaryDark"
-        android:gravity="right"
+        android:gravity="left"
         android:layout_below="@+id/tvAppDetailArtistLabel"
         android:layout_alignRight="@+id/tvAppDetailArtistLabel"
         android:layout_alignEnd="@+id/tvAppDetailArtistLabel"
         android:layout_alignLeft="@+id/tvAppDetailArtistLabel"
         android:layout_alignStart="@+id/tvAppDetailArtistLabel" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Summary"
-        android:id="@+id/tvAppDetailSummary"
-        android:layout_alignParentBottom="true"
-
-        android:layout_below="@+id/ivAppDetailBack"
-        android:layout_alignRight="@+id/tvAppDetailPrice"
-        android:layout_alignEnd="@+id/tvAppDetailPrice"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -87,5 +72,34 @@
         android:layout_alignParentStart="true"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="12dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/ivAppDetailBack"
+        android:layout_alignLeft="@+id/ivAppDetailImage"
+        android:layout_alignStart="@+id/ivAppDetailImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/tvAppDetailStatus">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Summary"
+            android:id="@+id/tvAppDetailSummary" />
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Status Internet"
+        android:id="@+id/tvAppDetailStatus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

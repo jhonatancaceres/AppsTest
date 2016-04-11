@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,6 +39,10 @@ public class AppListActivity extends AppCompatActivity {
         category=(Category)i.getSerializableExtra(Category.class.getName());
 
         ApplicationManager.setup(this,category.getLabel());
+
+        TextView internetStatus=(TextView)findViewById(R.id.tvAppListStatus);
+        internetStatus.setText(ApplicationManager.checkInternet(this)?"Online":"Offline");
+
         gridView=(GridView)findViewById(R.id.grid_view_app);
         gridView.setNumColumns(ApplicationManager.isTablet(this)?4:3);
         setupGridView();
@@ -58,12 +63,16 @@ public class AppListActivity extends AppCompatActivity {
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
                 }
             });
-            new SearchAppTask(category,gridAdapter,service).execute();
+            new SearchAppTask(this,category,gridAdapter,service).execute();
         }catch(Exception e){
-            System.out.println("Error cargando las apps");
             e.printStackTrace();
         }
         service=new AppService(this);
     }
 
+    @Override
+    public void onBackPressed(){
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        finish();
+    }
 }

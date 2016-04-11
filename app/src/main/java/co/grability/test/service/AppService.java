@@ -26,7 +26,6 @@ public class AppService extends Service {
         ArrayList<App> apps = null;
         if (ApplicationManager.checkInternet(context)) {
             try {
-                System.out.println(prepareUrl(category));
                 String json = readJson(prepareUrl(category));
                 json=json.replaceAll("im:","");
 

@@ -21,6 +21,10 @@ public class AppDetailActivity extends AppCompatActivity {
         Intent i=getIntent();
         App app=(App)i.getSerializableExtra(App.class.getName());
         ApplicationManager.setup(this,app.getTitle());
+
+        TextView internetStatus=(TextView)findViewById(R.id.tvAppDetailStatus);
+        internetStatus.setText(ApplicationManager.checkInternet(this) ? "Online" : "Offline");
+
         setupViewDetail(app);
 
     }
@@ -41,4 +45,10 @@ public class AppDetailActivity extends AppCompatActivity {
 
         }
     }
+    @Override
+    public void onBackPressed(){
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        finish();
+    }
+
 }

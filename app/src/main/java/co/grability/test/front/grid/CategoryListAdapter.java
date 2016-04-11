@@ -18,7 +18,6 @@ public class CategoryListAdapter extends BaseAdapter {
     private List<Category> items;
     private Context context;
     public CategoryListAdapter(Context context, List<Category> items) {
-        System.out.println(items.size());
         this.items = items;
         this.context=context;
     }

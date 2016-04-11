@@ -45,7 +45,6 @@ public class AppDao extends AbstractDao<App,Integer>{
     }
     public ArrayList<App> list(Category category) {
         Cursor cursor=rawQuery("SELECT * FROM "+METADATA_TABLE+" WHERE CATEGORY_ID='"+category.getId()+"'");
-        System.out.println(cursor.getCount());
         cursor.moveToFirst();
         ArrayList<App> apps=new ArrayList<>();
         while(!cursor.isAfterLast()){

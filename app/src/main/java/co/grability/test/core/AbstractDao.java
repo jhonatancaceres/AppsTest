@@ -39,7 +39,6 @@ public abstract class AbstractDao<BO,PK>{
     public abstract void save(BO e);
     public void save(List<BO> all){
         for(BO e:all){
-            System.out.println("Guardando categorias");
             save(e);
         }
     }

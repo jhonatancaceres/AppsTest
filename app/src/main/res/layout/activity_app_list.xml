@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".front.activity.AppListActivity"
-    android:background="@drawable/background">
+    tools:context=".front.activity.AppListActivity">
 
     <GridView
         android:layout_width="wrap_content"
@@ -17,7 +16,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:numColumns="3"
-        android:layout_below="@+id/searchView" />
+        android:layout_below="@+id/searchView"
+        android:listSelector="@android:color/transparent" />
 
     <SearchView
         android:layout_width="wrap_content"
@@ -25,4 +25,14 @@
         android:id="@+id/searchView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Status Internet"
+        android:id="@+id/tvAppListStatus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

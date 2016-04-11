@@ -27,10 +27,7 @@ public class CategoryDao extends AbstractDao<Category,Integer>{
     public ArrayList<Category> list() {
         ArrayList<Category> list = new ArrayList<>();
         try {
-            System.out.println("Consultando las categorias");
             Cursor cursor = rawQuery("SELECT * FROM " + METADATA_TABLE);
-            System.out.println(cursor.getCount());
-            System.out.println(cursor.getColumnCount());
             cursor.moveToFirst();
             while (cursor.isAfterLast() == false) {
                 list.add(new Category(cursor.getString(0), "", "", cursor.getString(1)));
