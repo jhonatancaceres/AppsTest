@@ -1,7 +1,7 @@
 # GrabilityTest
 
-Aplicacion android tipo prueba
-  Muestra una lista de categorias
+  Aplicacion android tipo Test.
+  Muestra una lista de categorias.
   Busca en un servicio REST las apps de Mac que cumplean con una categoria seleccionada.
   Funciona Online, consulta en una bd sqllite si existen las apps para la categoria.
   Guarda en cache las imagenes para evitar consultar imagenes previamente descargadas.
